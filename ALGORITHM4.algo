@@ -1,0 +1,22 @@
+ALGORITHM insertion_sort
+VAR
+    len,tmp,i,j:INTEGER;
+    tab: ARRAY_OF INTEGER;
+
+
+BEGIN
+    tab:=[8,58,6,11,36,2,1];
+    len := tab.length;
+
+FOR i FROM 0 TO len-1 STEP 1  DO
+    tmp:= tab[i]
+    j:=i-1;
+        WHILE (j >= 0 && tab[j] > tmp)  DO
+           tab[j+1] = tab[j]
+           j--
+        END_WHILE
+    tab[j+1] = tmp;
+  
+END_FOR
+
+END
